@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/icon/iconfont.css">
+    <script src="../../static/JQuery3.4.1/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="cantian">
+    <div class="top">
+        <div class="top-title">
+            <img src="../../static/img/demo.png">
+            <span>System manager</span>
+        </div>
+        <div class="top-user">
+            <img id="user-img" class="log-img dropdown" src="../../static/img/user1.jpg">
+            <span class="log-name">Admin</span>
+            <span><i class="iconfont" style="font-size:25px;">&#xe65a;</i></span>
+        </div>
+        <div class="top-drop-menu dropdown" id="dropmenu">
+            <div class="profile-info">
+                <h4 class="username">Scott White</h4>
+            </div>
+            <ul class="action">
+                <li class="litest">
+                    <a href="#">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="badge badge-danger pull-right">5</span>
+                        My Inbox
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Setting
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div id="mySidebar" class="sidebar" >
+            <a href="#"><span><i class="iconfont">&#xe7cf;</i><span class="icon-text">用户</span></span></a><br>
+            <a href="#"><span><i class="iconfont">&#xe882;</i><span class="icon-text">角色</span></span></a>
+            </a><br>
+            <a href="#"><span><i class="iconfont">&#xe7dc;</i><span class="icon-text">权限</span></span></a><br>
+            <a href="#"><span><i class="iconfont">&#xe7d0;</i><span class="icon-text">资源</span></span></a>
+        </div>
+
+        <div id="main">
+            <h2>A simple sidebar.</h2>
+            <p>The sidebar is in fixed position and does not close.</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../static/js/homepage.js"></script>
+</html>
