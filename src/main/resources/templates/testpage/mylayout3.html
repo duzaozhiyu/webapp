@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/icon.css">
+
+    <script src="/static/jquery-easyui-1.7.0/jquery.min.js"></script>
+    <script src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+</head>
+<body>
+<input class="input_btn" type="button" style="width:100px;height: 40px;" value="remove" onclick="removeEastPanel()"></input>
+<input class="input_btn" type="button" style="width:100px;height: 40px;" value="add" onclick="addWestPanel()"></input>
+<input class="input_btn" type="button" style="width:100px;height: 40px;" value="collapse" onclick="collapseWestPanel()"></input>
+<input class="input_btn" type="button" style="width:100px;height: 40px;" value="expand" onclick="expandPanel()"></input>
+<div id="cc" class="easyui-layout" style="width:600px;height:400px;">
+    <div data-options="region:'north',title:'North Title',split:true" style="height:100px;"></div>
+    <div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div>
+    <div data-options="region:'west',title:'West',split:true" style="width:100px;"></div>
+    <div data-options="region:'center',title:'center title'" style="padding:5px;"></div>
+
+</div>
+</body>
+<script>
+   function addWestPanel(){
+       let East=$("#cc").layout();
+       let option={
+           region:"east",
+           title:"East Title",
+           width:"100",
+       }
+       East.layout("add",option);
+   }
+
+   function removeEastPanel(){
+       $("#cc").layout("remove",'east');
+   }
+
+   function expandPanel(){
+       $("#cc").layout("expand","west");
+   }
+
+   function collapseWestPanel(){
+       $("#cc").layout("collapse","west")
+   }
+</script>
+</html>

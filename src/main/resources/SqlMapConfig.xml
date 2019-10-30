@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置别名
+    typeAliases和environments是平等级别的标签
+        type是实体类的完整类名
+        alias是类的别名
+    -->
+    <environments default="development2">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://localhost:3306/mymusic" />
+                <property name="username" value="root" />
+                <property name="password" value="123456" />
+            </dataSource>
+        </environment>
+        <environment id="development2">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://localhost:3306/systemdemo" />
+                <property name="username" value="root" />
+                <property name="password" value="123456" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!-- 映射文件的位置 -->
+        <!--<mapper resource="com/soft/domain/User.xml" />-->
+        <!--注解方式可以使用如下配置方式-->
+        <!-- 开启mapper接口的包扫描，基于class的配置方式 -->
+        <package name="com.example.mapper"/>
+    </mappers>
+</configuration>

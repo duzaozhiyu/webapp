@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.SystemUserLoginMapper">
+    <!--
+     1.#{},预编译的方式preparedstatement，使用占位符替换，防止sql注入，一个参数的时候，任意参数名可以接收
+     2.${},普通的Statement，字符串直接拼接，不可以防止sql注入，一个参数的时候，必须使用${value}接收参数
+   -->
+    <!--<resultMap id="SysManagerUSer" type="com.example.model.ManagerUser">-->
+    <!--<id column="id" property="id"></id>-->
+    <!--<result column="username" property="userName"></result>-->
+    <!--<result column="password" property="passWord"></result>-->
+    <!--<result column="email" property="email"></result>-->
+    <!--</resultMap>-->
+    <!--<select id="isLogin" resultType="java.lang.Integer">-->
+    <!--select count(*) from SYSUser_Login where username=#{username} and password=#{password};-->
+    <!--</select>-->
+
+    <resultMap id="BaseResultMap" type="com.example.model.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="userName" jdbcType="VARCHAR" property="userName" />
+        <result column="passWord" jdbcType="VARCHAR" property="passWord" />
+        <result column="realName" jdbcType="VARCHAR" property="realName" />
+    </resultMap>
+
+    <select id="isLogin" resultType="java.lang.Integer">
+        select count(*)from user where username=#{username} and password=#{password}
+    </select>
+</mapper>

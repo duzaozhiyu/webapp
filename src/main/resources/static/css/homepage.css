@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+.top{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: #595959;
+}
+
+.top .top-title{
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    left: 10px;
+    line-height: 100px;
+    /*font-size:0;*/
+}
+
+.top .top-title * , .top .top-user *{
+    color: #fefeff;
+    display:inline-block;vertical-align:middle;
+}
+
+.top .top-title span{
+    font-size: 35px;
+}
+
+.top .top-title .top-img{
+
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    display: inline-block;
+}
+
+.top .top-title .top-name{
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    line-height: 100px;
+    /*background-color: #1f6377;*/
+}
+
+.top .top-user{
+    position: absolute;
+    right: 15px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.top .top-user img{
+    width: 64px;
+    height: 64px;
+    border-radius:100%;
+    margin-right: 10px;
+}
+
+.top .top-user span{
+    font-size:15px;
+}
+
+.top .top-drop-menu{
+    position: absolute;
+    right: 0px;
+    top:100px;
+    background-color: #cc2936;
+    border-radius:5px;
+    min-width: 300px;
+    color: #fefeff;
+    /*opacity:0;*/
+    /*visibility:hidden;*/
+    display:none;
+    z-index:1;
+}
+
+.profile-info{
+    background-color: #64A6BD;
+}
+
+.top .top-drop-menu div h4 ,.top .top-drop-menu ul li{
+    padding: 12px;
+    border-bottom: 1px solid #595959;
+}
+
+/*后期放到一个公共的Common 的js 中*/
+a{
+    /*去掉下划线*/
+    text-decoration:none;
+    color: #fefeff;
+}
+
+.top .top-drop-menu ul{
+    list-style-type: none;
+    font-size: 12px;
+}
+
+.content{
+    position: absolute;
+    top: 100px;
+    bottom: 0px;
+    width: 100%;
+    /*background-color: #1f6377;*/
+}
+
+.content .sidebar{
+    /*绝对定位，（固定定位）*/
+    position: fixed;
+    top:100px;
+    background-color: #CC2936;
+    bottom: 0px;
+    height: 100%;
+    width: 80px;
+    padding-top: 10px;
+    /*是文本不换行*/
+    white-space: nowrap;
+    overflow-x:hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.content .sidebar a{
+    padding: 8px 8px 8px 32px;
+    color: #f5dd9b;
+    font-size: 18px;
+    display:block;
+}
+
+.content .sidebar a:hover{
+    color: #fefeff;
+}
+.content .sidebar span i{
+    margin-right: 32px;
+}
+.content #main{
+    height: 100%;
+    transition: margin-left 0.5s;
+    margin-left: 80px;
+}
+

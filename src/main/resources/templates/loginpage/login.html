@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body:before {
+            position: fixed;
+        }
+
+        .center div {
+            margin: 0 auto;
+
+        }
+
+        .center {
+
+        }
+
+        .top {
+            display: flex; /*弹性布局*/
+            align-items: center;
+            justify-content: center;
+        }
+        .top_title h1{
+            font-weight:300   /*字体粗细*/
+        }
+        .input_text {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background: #f1f1f1;
+            padding: 13px;
+            border: 0px solid transparent;
+        }
+
+        .center_img {
+            border-radius: 100%;
+            background-color:#ee3b3a;
+            display: flex; /*弹性布局*/
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center_form_log form p {
+            font-size: 12px;
+        }
+        .center_form_res form p {
+            font-size: 12px;
+        }
+    </style>
+
+    <script src="/static/jquery-easyui-1.7.0/jquery.min.js"></script>
+</head>
+<body style="background-color:#08ffc8 ">
+<div class="contain" style="height:100%;background-color: #08ffc8">
+    <div class="top" style="height:150px">
+        <div class="top_title" style="width: 350px;height:50px;text-align:center">
+            <h1>System login</h1>
+        </div>
+    </div>
+    <div class="center" style="">
+        <div style="width: 350px;  height: auto;padding-bottom: 20px;padding-top:30px;background-color: #fdfdfe">
+            <div class="center_img" style="width: 150px;height: 150px;margin-bottom: 30px">
+                <img src="/static/img/login.png" style="vertical-align:baseline">
+            </div>
+            <div class="center_form_log" style="text-align: center;width:80%;">
+                <form action="/toLogin" method="get">
+                    <input class="input_text" name="username" type="text" placeholder="username" style="box-sizing: border-box">
+                    <input class="input_text" name="password" type="password" placeholder="password" style="box-sizing: border-box">
+                    <input class="input_text btn_login" type="button" onclick="alert()" style="background-color: #ee3b3a;color: #fdfdfe;"
+                           value="Login in">
+                    <p>Not registered?<a style="color:red">create a new account</a></p>
+                </form>
+            </div>
+            <div class="center_form_res" style="text-align: center;width:80%;display: none;">
+                <form action="/toRegister" method="get">
+                    <input class="input_text" type="text" placeholder="username" style="box-sizing: border-box">
+                    <input class="input_text" type="password" placeholder="password" style="box-sizing: border-box">
+                    <input class="input_text" type="email" placeholder="email address"
+                           style="box-sizing: border-box">
+                    <input class="input_text" type="button" onclick="alert()" style="background-color: #ee3b3a;color: #fdfdfe;"
+                           value="create">
+                    <p>have account!<a style="color:red">go back to login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--<div class="bottom" style="background-color:#204969"></div>-->
+</div>
+</body>
+<script src="/static/js/login.js">
+</script>
+</html>

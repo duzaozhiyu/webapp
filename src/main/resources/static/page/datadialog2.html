@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/icon.css">
+
+    <script src="/static/jquery-easyui-1.7.0/jquery.min.js"></script>
+    <script src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+</head>
+<body>
+<div class="contain" style="width: 100%;height: 100%;">
+    <div id="datagrid_1">
+
+    </div>
+</div>
+<script>
+    $(function(){
+        $("#datagrid_1").datagrid({
+            fit:true,
+            fitColumns:true,
+            loadMsg:"get",
+            scrollbarSize:0,
+            columns: [
+                [
+                    {field: 'code', title: 'Code', width: 100},
+                    {field: 'name', title: 'Name', width: 100},
+                    {field: 'price', title: 'Price', width: 100, align: 'right'}
+                ]
+            ],
+            onLoadSuccess:function(data){
+                $(this).datagrid("fitColumns");
+            }
+        });
+    })
+</script>
+</body>
+
+</html>

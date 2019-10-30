@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.7.0/themes/icon.css">
+
+    <script src="/static/jquery-easyui-1.7.0/jquery.min.js"></script>
+    <script src="/static/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <div class="easyui-tabs" data-options="width:700,height:600">
+
+        <div title="tab1">first</div>
+        <div title="tab2">second</div>
+        <div title="tab3">third</div>
+    </div>
+
+
+    <div id="tt" class="easyui-tabs" style="width:500px;height:250px;" data-options="tools:'#tools'">
+        <div title="Tab1" style="padding:20px;display:none;">
+            tab1
+        </div>
+        <div title="Tab2" data-options="closable:true" style="overflow:auto;padding:20px;display:none;">
+            tab2
+        </div>
+        <div title="Tab3" data-options="iconCls:'icon-reload',closable:true" style="padding:20px;display:none;">
+            tab3
+        </div>
+    </div>
+
+    <div id="tools">
+        <input type="button" class="easyui-linkbutton" dataoptions="iconCls:'icon-mini-add'" value="add">
+        <input type="button" class="easyui-linkbutton" dataoptions="iconCls:'icon-mini-add'" value="add">
+    </div>
+</body>
+</html>
