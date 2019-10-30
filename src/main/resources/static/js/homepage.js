@@ -93,6 +93,7 @@ function sidebarIn() {
 
 function sidebarOut() {
     console.log("out");
+    console.log("ooo");
 }
 
 
